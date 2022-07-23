@@ -11,7 +11,7 @@ function Navbar() {
                 </div>
                 <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
             </NavLink>
-            {/* Divider */}
+            {/* hello Divider */}
             <hr className="sidebar-divider my-0" />
             {/* Nav Item - Dashboard */}
             <li className="nav-item active">
