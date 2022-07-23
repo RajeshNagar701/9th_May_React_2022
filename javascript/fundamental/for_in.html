@@ -1,0 +1,35 @@
+
+<!--
+
+JSON Objects
+JSON objects are written inside curly braces.
+Just like in JavaScript, objects can contain multiple name/value pairs:
+-->
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+function myFunction() 
+{
+  var person = {fname:"John", lname:"Doe", age:25}; 
+  
+  var text = "";
+  var x;
+  for (x in person) {
+    text=text+person[x] + " ";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+var object = { a: 1, b: 2, c: 3 };
+var property;
+for (property in object) 
+{
+  //document.write(property); 
+  //document.write(object[property]);
+}
+
+
+
+
+</script>

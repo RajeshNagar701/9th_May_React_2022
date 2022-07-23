@@ -1,0 +1,108 @@
+<!--
+JavaScript Arrays     const cars = ["Saab", "Volvo", "BMW"];
+
+document.getElementById("demo").innerHTML = cars;
+
+The For Of Loop
+The JavaScript for..of statement loops through the elements of an iterable object.
+-->
+<script>
+// List all Elements
+const cars = ["Saab", "Volvo", "BMW"];
+for(var i=0; i<cars.length;i++)
+{
+	document.write(cars[i] + "<br>");
+}
+
+
+let text = "";
+for (x of cars) 
+{
+  text += x + "<br>";
+}
+document.write(text);
+
+//JavaScript Objects    
+const car = {type:"Fiat", model:"500", color:"white"};
+document.write(car.type + car.model + car.color);
+
+// Create a Map
+/*
+const car = new Map([
+  ["type", "Fiat"],
+  ["model", '500'],
+  ["color", 'white']
+]);
+*/
+
+/*
+let text = "";
+fruits.forEach (function(value, key) {
+  if (key == "type") {
+    return new Date(value);
+  } else {
+    return value;
+  }
+})
+
+document.getElementById("demo").innerHTML = text;
+*/
+
+/*
+What is JSON?
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data interchange format
+JSON is language independent *
+JSON is "self-describing" and easy to understand
+
+* The JSON syntax is derived from JavaScript object notation syntax, 
+but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.
+
+JSON Syntax Rules
+
+Data is in name/value pairs
+Data is separated by commas
+Curly braces hold objects
+Square brackets hold arrays
+
+*/
+/*
+let json = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+let text = "";
+
+const obj = JSON.parse(json, function (key, value){
+	
+})
+*/
+
+/*
+let json = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+const obj = JSON.parse(json); // conver json in to javascript object
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+*/
+
+/*
+//Use the JavaScript function JSON.parse() to convert text into a JavaScript object:
+const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
+const text = '["Ford", "BMW", "Audi", "Fiat"]';
+const myArr = JSON.parse(text);
+*/
+
+/*
+//Use the JavaScript function JSON.stringify() to convert it into a string.
+const obj = {name: "John", age: 30, city: "New York"};
+const myJSON = JSON.stringify(obj);
+document.getElementById("demo").innerHTML = myJSON;
+
+*/
+</script>

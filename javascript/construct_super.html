@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+class Car 
+{
+  constructor(brand) 
+  {
+    document.write(this.carname = brand + "<br>");
+  }
+}
+class Model extends Car 
+{
+  constructor(brand, mod) 
+  {
+    super(brand);
+     document.write(this.model = mod);
+  }
+}
+mycar = new Model("Ford", "Mustang");
+</script>
+
+</body>
+</html>

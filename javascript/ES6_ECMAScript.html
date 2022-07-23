@@ -1,0 +1,75 @@
+<!--
+JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.
+
+ECMAScript is the official name of the language.
+
+ECMAScript versions have been abbreviated to ES1, ES2, ES3, ES5, and ES6.
+
+Since 2016 new versions are named by year (ECMAScript 2016 / 2017 / 2018).
+
+The Original JavaScript ES1 ES2 ES3 (1997-1999)
+The First Main Revision ES5 (2009)
+The Second Revision ES6 (2015)
+Yearly Additions (2016, 2017, 2018)
+
+-->
+
+<script>
+
+//The let keyword allows you to declare a variable with block scope.
+/*
+let  x = 10;
+{  
+  let x = 2;
+}
+document.write(x);
+/*
+
+
+
+
+/*
+The const keyword allows you to declare a constant 
+Variables defined with const cannot be Redeclared.
+Variables defined with const cannot be Reassigned.
+Variables defined with const have Block Scope.
+*/
+
+//const PI = 3.141592653589793;
+//PI = 3.14;      // This will give an error
+//PI = PI + 10;   // This will also give an error
+
+
+
+/*
+Arrow Functions
+Arrow functions allows a short syntax for writing function expressions.
+You don't need the function keyword, the return keyword, and the curly brackets.
+*/
+// ES5
+/*
+var x = function(x, y) {
+   return x * y;
+}
+
+// ES6
+const x = (x, y) => x * y;
+*/
+
+// ARR INTO LOOP
+const cars = ["BMW", "Volvo", "Mini"];
+let text = "";
+for (let x of cars) {
+  text += x + "<br>";
+}
+document.write(text);
+
+// STRING T0 LOOP
+const name="Javascript";
+let text1= "";
+for (let y of name) {
+  text1 += y + "<br>";
+}
+document.write(text1);
+
+</script>

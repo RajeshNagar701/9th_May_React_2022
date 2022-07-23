@@ -1,0 +1,138 @@
+<script>
+/*
+What is JSON?
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data interchange format
+JSON is language independent *
+JSON is "self-describing" and easy to understand
+
+* The JSON syntax is derived from JavaScript object notation syntax, 
+but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.
+
+
+var obj={
+	name:"Rajesh",
+	age:31
+}
+
+let json={"name":"John"}
+
+JSON Syntax Rules
+
+Data is in name/value pairs
+Data is separated by commas
+Curly braces hold objects
+Square brackets hold arrays
+
+Valid Data Types
+In JSON, values must be one of the following data types:
+● a string
+● a number
+● an object (JSON object)
+● an array
+● a boolean
+● null
+
+
+JSON Strings
+Strings in JSON must be written in double quotes.
+let json={"name":"John"}
+
+JSON Numbers
+let json={"age":30}
+
+
+JSON Objects
+Values in JSON can be objects.
+
+let json = {"firstName":"John", "lastName":"Doe"}
+
+
+
+JSON Arrays
+Values in JSON can be arrays.
+let json = {
+"employees":[ "John", "Anna", "Peter" ],
+"accountant":["mahesh","nayan"]
+}
+
+Converting a JSON Text to a JavaScript Object
+
+let json ='{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+*/
+
+
+//Then, use the JavaScript built-in function JSON.parse() to convert the string into a JavaScript object:
+</script>
+
+
+
+<script>
+/*
+const jsontxt = '{"name":"John", "age":30, "city":"New York"}';
+document.write(jsontxt + "<br>");
+
+const obj = JSON.parse(jsontxt); //json convert into javascript object;
+document.write("<h1>" + obj.name + " , " + obj.age + "</h1>");
+*/
+</script>
+
+
+<script>
+/*
+let json = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+const obj = JSON.parse(json); // conver json in to javascript object
+document.write(obj.employees[0].firstName + " " + obj.employees[0].lastName);
+*/
+</script>
+
+<script>
+/*
+
+let json = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+let text = "";
+
+const obj = JSON.parse(json, function (key, value){
+
+})
+*/
+</script>
+
+
+
+
+<script>
+
+//Array as JSON
+/*
+const arrjson = '["Ford", "BMW", "Audi", "Fiat"]';
+const objArr = JSON.parse(arrjson); 
+document.write(objArr[0]);
+*/
+</script>
+
+
+
+<script>
+
+//Use the JavaScript function JSON.stringify() to convert it into a string.
+
+
+const obj = {name: "John", age: 30, city: "New York"};
+const myJSON = JSON.stringify(obj);
+document.write(myJSON);
+console.log(myJSON);
+
+</script>

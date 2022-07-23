@@ -1,0 +1,65 @@
+<!--
+
+Throw, and Try...Catch...Finally
+
+The try statement defines a code block to run (to try).
+
+The catch statement defines a code block to handle any error.
+
+The finally statement defines a code block to run regardless of the result.
+
+The throw statement defines a custom error.
+
+-->
+<!--
+JavaScript try and catch
+The try statement allows you to define a block of code to be tested for 
+errors while it is being executed.
+
+The catch statement allows you to define a block of code to be executed, 
+if an error occurs in the try block.
+
+The JavaScript statements try and catch come in pairs:
+-->
+<p id="demo" ></p>
+
+<script>
+try {
+ var a=10;
+ document.getElementById('demo').innerHTML=a;
+}
+catch(err) 
+{
+  document.getElementById("demo").innerHTML = 
+  err.name + "<br>" + err.message;
+}
+</script>
+
+
+
+
+<input id="demo1" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="p01"></p>
+
+
+
+
+<script>
+function myFunction() 
+{
+ 
+  let x = document.getElementById("demo1").value;
+
+ try {
+    if(x == "") throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 5) throw "too low";
+    if(x > 10) throw "too high";
+  }
+  catch(err) {
+    document.getElementById("p01").innerHTML = "Input is " + err;
+  }
+}
+</script>

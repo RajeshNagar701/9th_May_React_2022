@@ -1,0 +1,84 @@
+<!--
+Types of variable
+
+var a = "value"
+var a,b ,c;
+a=10;
+b=20;
+
+In JavaScript, only var variables can be redeclared. 
+This means that you can create a new variable with the same name and keep its value, 
+or assign the variable a different value. 
+
+
+
+
+let  : let cannot be Redeclared.
+let must be Declared before use. 
+let have Block Scope.
+
+let x = "John Doe";
+{let x = 0;}
+{let x = 1;}
+// SyntaxError: 'x' has already been declared
+
+
+
+const : const cannot be Redeclared.
+const cannot be Reassigned.
+const have Block Scope.
+const PI = 3.141592653589793;
+PI = 3.14;      // This will give an error
+PI = PI + 10;   // This will also give an error
+
+
+Variable names can contain numbers, letters, underscores (_), and dollar signs ($)
+Variable names cannot contain whitespace characters
+Variable names are case sensitive
+Variable names cannot contain any reserved words or reserved keywords 
+(i.e. break, default, with)
+Variable names should not begin with numbers alwatys start with alpha
+
+var 123name ="raj"  flase
+var bname_123="raj"  true
+var @name="raj"     false
+var name$raj="raj"  true
+var name a="Raj"   false
+  
+
+Scope  Local Global
+
+
+
+Keyword	Variable    Scope	  Reassign?	      Redeclare?	Hoist?
+var	               Function	    Yes	             Yes	     Yes
+const	            Block	    Yes	              No	      No
+let	                Block	     No	              No	      No
+
+
+-->
+
+
+<script>
+
+var a=10;
+a=20;
+document.write(a + "<br>");
+
+
+
+
+
+let name="Raj";
+{
+	let name="akash";
+	document.write(name + "<br>");
+}
+document.write(name + "<br>");
+
+
+const PI=3.14;
+document.write(PI + "<br>");
+
+	
+</script>

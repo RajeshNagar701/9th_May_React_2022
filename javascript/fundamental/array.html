@@ -1,0 +1,70 @@
+<!--
+JavaScript arrays are used to store multiple values in a single variable.
+An array is a special variable, which can hold more than one value at a time.
+
+var cars = ["Saab", "Volvo", "BMW"];
+
+var car1 = "Saab";
+var car2 = "Volvo";
+var car3 = "BMW";
+
+var cars=["Saab","Volvo","BMW"];
+
+Access the Elements of an Array
+You access an array element by referring to the index number.
+var name = cars[0];
+-->
+<p id="all"></p>
+
+<script>
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("all").innerHTML = cars;
+</script>
+
+<p id="demo"></p>
+
+<script>
+var person = ["John", "Doe", 46];
+document.getElementById("demo").innerHTML = person[0];
+document.write(person);
+</script>
+
+<script>
+//var emp=new Array("Jai","Vijay","Smith");  
+var emp=["Jai","Vijay","Smith"];  
+for (i=0;i<emp.length;i++)
+{  
+	document.write("<h1>" + emp[i] + "</h1>");  
+}  
+		
+</script>
+
+
+<!-- DS => Array , Object  -->
+    <script>
+        let hiteshFrd = ["Krupa" , "Varun" , "krishna" , "Alfiya"]
+        document.write(hiteshFrd + '<br>')
+        
+		
+		
+		// add's an element in last
+        hiteshFrd.push("Karan")
+        document.write(hiteshFrd + '<br>')
+        
+		// to remove an element from last use pop
+        hiteshFrd.pop()
+        document.write(hiteshFrd + '<br>')
+        
+		
+		// to add an element from first
+        hiteshFrd.unshift("karan")
+        document.write(hiteshFrd + '<br>')
+
+        // to remove an element from first
+        hiteshFrd.shift()
+        document.write(hiteshFrd + '<br>')
+    </script>
+
+
+
+

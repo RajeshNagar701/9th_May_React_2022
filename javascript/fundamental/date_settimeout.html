@@ -1,0 +1,34 @@
+<h1 id="time"></h1>
+
+<h1 id="settime"></h1>
+
+<h1 id="demo"></h1>
+
+<script>
+//Executes a function, after waiting a specified number of milliseconds.
+var todaytime = new Date();
+var ttime = (todaytime.getHours()) + ":" + todaytime.getMinutes() + ":" + todaytime.getSeconds();
+document.getElementById("time").innerHTML = ttime;
+
+
+function time()
+{
+	var today = new Date();
+	var time = (today.getHours()) + ":" + today.getMinutes() + ":" + today.getSeconds();
+	document.getElementById("settime").innerHTML = time;
+}
+setTimeout(time, 3000);
+
+
+
+//The setInterval() method repeats a given function at every given time-interval.
+setInterval(myTimer, 1000);
+
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+
+
+
+</script>
