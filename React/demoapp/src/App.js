@@ -8,6 +8,8 @@ import Class_State from "./State/Class_State";
 import Hooks_State from "./State/Hooks_State";
 import LClass_State from "./LifeCycle/Class_State"
 import Main_Hooks from "./LifeCycle/Main_Hooks"
+import Form from "./Form_Handeling/Form"
+import Form1 from "./Form_Handeling/Form1"
 function App() {
   return (
   <>{
@@ -24,10 +26,13 @@ function App() {
     <Class_State/>
     <Hooks_State/>
     <LClass_State/>
+	<Main_Hooks/>
+	<Form/>
     */
     }
+	
+	<Form1/>
    
-   <Main_Hooks/>
   </>
   );
 }
