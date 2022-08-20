@@ -33,9 +33,15 @@ function Navbar() {
                 </a>
                 <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div className="bg-white py-2 collapse-inner rounded">
-                        <h6 className="collapse-header">Categories</h6>
+                        <h6 className="collapse-header">Basic Categories</h6>
                         <NavLink className="collapse-item" to="/add_category">Add_categories</NavLink>
-                        <NavLink className="collapse-item" to="/manage_category">Manage Categories</NavLink>
+                    </div>
+                </div>
+                <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div className="bg-white py-2 collapse-inner rounded">
+                        <h6 className="collapse-header">DB Customer</h6>
+                        <NavLink className="collapse-item" to="/add_customer_db">Add_Customer</NavLink>
+                        <NavLink className="collapse-item" to="/manage_customer_db">Manage Customer</NavLink>
                     </div>
                 </div>
             </li>

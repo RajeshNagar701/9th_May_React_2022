@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../Component/Navbar'
 
-function Manage_category() {
+function Manage_customer_db() {
     return (
 
         <body id="page-top">
@@ -705,4 +705,4 @@ function Manage_category() {
     )
 }
 
-export default Manage_category
+export default Manage_customer_db

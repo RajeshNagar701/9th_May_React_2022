@@ -1,19 +1,33 @@
 import React,{useState,useEffect} from 'react'
 import Navbar from '../Component/Navbar'
 
-function Add_categories() {
+function Add_customer_db() {
 
     useEffect(()=>{
-        
-    })
+        fetchdata();
+    },[]);
 
     const[formvalue,setformvalue]=useState({
         id:new Date().getTime().toString(),
         name:"",
-        desc:"",
-        file:"",
-    })  
+        username:"",
+        password:"",
+        mobile:"",
+    }) 
+    
     const[alldata,setalldata]=useState([]);
+    function fetchdata(){
+        fetch('https://nazisadmin-default-rtdb.firebaseio.com/customer.json')
+        .then((response) => response.json())
+        .then((data) => {
+            
+            setalldata(data);
+
+        });
+       
+    }
+    
+    
    
     function changehandel(e){
 
@@ -24,14 +38,25 @@ function Add_categories() {
     function submithandel(e)
     {
         e.preventDefault();
-        console.log(formvalue);
-        setalldata([...alldata,formvalue]);
-        setformvalue({name:"",desc:"",file:""})
-        //console.log(alldata); 
+        fetch('https://nazisadmin-default-rtdb.firebaseio.com/customer.json', {
+        method: 'POST',
+        body: JSON.stringify(formvalue),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+        })
+        .then((response) => response.json())
+        .then((data) =>{
+            setformvalue({name:"",username:"",password:"",mobile:""})
+            alert('Data Add Success');
+            fetchdata();
+        });
+       
     }
   
 function deletedata(deleteid)
   {
+    
       const afterdelet=alldata.filter((item) => item.id !== deleteid)
       setalldata(afterdelet);
   }
@@ -231,23 +256,27 @@ function deletedata(deleteid)
                             {/* DataTales Example */}
                             <div className="card shadow mb-4">
                                 <div className="card-header py-3">
-                                    <h6 className="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                                    <h6 className="m-0 font-weight-bold text-primary">Add Customer</h6>
                                 </div>
                                 <div className="card-body">
                                     <form method="post">
-                                        <div className="mb-3 mt-3">
-                                            <label htmlFor="email" className="form-label">Categories Name</label>
+                                     <div className="mb-3 mt-3">
+                                            <label htmlFor="Name" className="form-label">Name</label>
                                             <input type="text" className="form-control" value={formvalue.name} name="name" onChange={changehandel}  />
                                         </div>
                                         <div className="mb-3 mt-3">
-                                            <label htmlFor="email" className="form-label">Description</label>
-                                            <textarea className="form-control" name="desc" value={formvalue.desc} onChange={changehandel}></textarea>
+                                            <label htmlFor="username" className="form-label">username</label>
+                                            <input type="text" className="form-control" value={formvalue.username} name="username" onChange={changehandel}  />
                                         </div>
                                         <div className="mb-3 mt-3">
-                                            <label htmlFor="email" className="form-label">file url</label>
-                                            <input type="url" className="form-control" name="file" onChange={changehandel} value={formvalue.file} />
+                                            <label htmlFor="password" className="form-label">password</label>
+                                            <input type="password" className="form-control" value={formvalue.password} name="password" onChange={changehandel}  />
                                         </div>
-                                        
+                                        <div className="mb-3 mt-3">
+                                            <label htmlFor="mobile" className="form-label">mobile</label>
+                                            <input type="number" className="form-control" value={formvalue.mobile} name="mobile" onChange={changehandel}  />
+                                        </div>
+                                       
                                         <button type="submit" className="btn btn-primary" onClick={submithandel}>Submit</button>
                                     </form>
 
@@ -259,23 +288,26 @@ function deletedata(deleteid)
                                                 <tr>
                                                     <th>Id</th>
                                                     <th>Name</th>
-                                                    <th>Desc</th>
-                                                    <th>File</th>  
-
+                                                    <th>username</th>
+                                                    <th>Password</th>
+                                                    <th>Mobile</th>  
+                                                    <th>Delete</th> 
                                                 </tr>
                                             </thead>
                                             
                                             <tbody>
                                                {   
-                                               alldata.map((item,index)=>{
+                                             Object.keys(alldata).map((item, index) => {
+                                                const { name,username,password,mobile,id } = alldata[item];
 
                                                 return(
                                                     <tr key={index}>
-                                                        <td>{item.id}</td>
-                                                        <td>{item.name}</td>
-                                                        <td>{item.desc}</td>
-                                                        <td><img src={item.file} width="20opx" /></td>
-                                                        <td><button onClick={()=>deletedata(item.id)}>Delete{index}</button></td>
+                                                        <td>{id}</td>
+                                                        <td>{name}</td>
+                                                        <td>{username}</td>
+                                                        <td>{password}</td>
+                                                        <td>{mobile}</td>
+                                                        <td><button onClick={()=>deletedata(id)}>Delete{index}</button></td>
                                                     </tr>
                                                 )
 
@@ -305,4 +337,4 @@ function deletedata(deleteid)
     )
 }
 
-export default Add_categories
+export default Add_customer_db
