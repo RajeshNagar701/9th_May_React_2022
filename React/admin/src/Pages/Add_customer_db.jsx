@@ -1,12 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import Navbar from '../Component/Navbar'
+import swal from 'sweetalert';
 
 function Add_customer_db() {
 
-    useEffect(()=>{
-        fetchdata();
-    },[]);
-
+    
     const[formvalue,setformvalue]=useState({
         id:new Date().getTime().toString(),
         name:"",
@@ -15,20 +13,7 @@ function Add_customer_db() {
         mobile:"",
     }) 
     
-    const[alldata,setalldata]=useState([]);
-    function fetchdata(){
-        fetch('https://nazisadmin-default-rtdb.firebaseio.com/customer.json')
-        .then((response) => response.json())
-        .then((data) => {
-            
-            setalldata(data);
 
-        });
-       
-    }
-    
-    
-   
     function changehandel(e){
 
       setformvalue({...formvalue,[e.target.name]:[e.target.value], id:new Date().getTime().toString()});
@@ -49,17 +34,10 @@ function Add_customer_db() {
         .then((data) =>{
             setformvalue({name:"",username:"",password:"",mobile:""})
             alert('Data Add Success');
-            fetchdata();
         });
        
     }
   
-function deletedata(deleteid)
-  {
-    
-      const afterdelet=alldata.filter((item) => item.id !== deleteid)
-      setalldata(afterdelet);
-  }
 
 
 
@@ -280,44 +258,7 @@ function deletedata(deleteid)
                                         <button type="submit" className="btn btn-primary" onClick={submithandel}>Submit</button>
                                     </form>
 
-                                    <hr />
-                                    <h1>Categories List</h1>
-                                    <div className="table-responsive">
-                                        <table className="table table-bordered" id="dataTable" width="100%" cellSpacing={0}>
-                                            <thead>
-                                                <tr>
-                                                    <th>Id</th>
-                                                    <th>Name</th>
-                                                    <th>username</th>
-                                                    <th>Password</th>
-                                                    <th>Mobile</th>  
-                                                    <th>Delete</th> 
-                                                </tr>
-                                            </thead>
-                                            
-                                            <tbody>
-                                               {   
-                                             Object.keys(alldata).map((item, index) => {
-                                                const { name,username,password,mobile,id } = alldata[item];
-
-                                                return(
-                                                    <tr key={index}>
-                                                        <td>{id}</td>
-                                                        <td>{name}</td>
-                                                        <td>{username}</td>
-                                                        <td>{password}</td>
-                                                        <td>{mobile}</td>
-                                                        <td><button onClick={()=>deletedata(id)}>Delete{index}</button></td>
-                                                    </tr>
-                                                )
-
-                                               })     
-                                               
-                                               } 
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>    
+            
 
                                 </div>
                             </div>
