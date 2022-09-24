@@ -10,6 +10,8 @@ import LClass_State from "./LifeCycle/Class_State"
 import Main_Hooks from "./LifeCycle/Main_Hooks"
 import Form from "./Form_Handeling/Form"
 import Form1 from "./Form_Handeling/Form1"
+import UseContextmain1 from "./UseContext/PropsDrilling/UseContextmain"
+import UseContextmain2 from "./UseContext/CreateContext/UseContextmain"
 function App() {
   return (
   <>{
@@ -26,12 +28,14 @@ function App() {
     <Class_State/>
     <Hooks_State/>
     <LClass_State/>
-	<Main_Hooks/>
-	<Form/>
+    <Main_Hooks/>
+    <Form/>
+    <Form1/>
+    <UseContextmain1/>
     */
     }
 	
-	<Form1/>
+    <UseContextmain2/>
    
   </>
   );
