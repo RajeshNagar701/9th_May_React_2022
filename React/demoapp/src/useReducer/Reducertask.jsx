@@ -21,18 +21,18 @@ function Reducertask() {
         number: 0
     }
 
-    const [state, dispatch] = useReducer(Reducer, initistate);
+    const [state1, dispatch1] = useReducer(Reducer, initistate);
 
 
     return (
         <div className='container'>
 
-            <button onClick={() => dispatch({ type: "CHANGENAME" })}>Change name</button>
-            <h1>My name is : {state.name}</h1>
+            <button onClick={() => dispatch1({ type: "CHANGENAME" })}>Change name</button>
+            <h1>My name is : {state1.name}</h1>
             <hr />
-            <button onClick={() => dispatch({ type: "PLUS" })}>+</button>
-            <h1>{state.number}</h1>
-            <button onClick={() => dispatch({ type: "MINUS" })}>-</button>
+            <button onClick={() => dispatch1({ type: "PLUS" })}>+</button>
+            <h1>{state1.number}</h1>
+            <button onClick={() => dispatch1({ type: "MINUS" })}>-</button>
         </div>
     )
 }

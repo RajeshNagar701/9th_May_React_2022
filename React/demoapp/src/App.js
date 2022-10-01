@@ -12,6 +12,7 @@ import Form from "./Form_Handeling/Form"
 import Form1 from "./Form_Handeling/Form1"
 import UseContextmain1 from "./UseContext/PropsDrilling/UseContextmain"
 import UseContextmain2 from "./UseContext/CreateContext/UseContextmain"
+import Reducertask from "./useReducer/Reducertask";
 function App() {
   return (
   <>{
@@ -31,11 +32,12 @@ function App() {
     <Main_Hooks/>
     <Form/>
     <Form1/>
-    <UseContextmain1/>
+    <UseContextmain1/>\
+    <UseContextmain2/>
     */
     }
 	
-    <UseContextmain2/>
+    <Reducertask/>
    
   </>
   );
