@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "phone": "1-770-736-8031 x56442",
+      "website": "hildegard.org"
+    },
+    {
+      "id": 2,
+      "name": "patel",
+      "username": "patel@gmail.com",
+      "email": "patel@gmail.com",
+      "phone": "215464",
+      "website": "https://www.npmjs.com/package//axios"
+    },
+    {
+      "id": 3,
+      "name": "vishv patel",
+      "username": "patel@gmail.com",
+      "email": "vishvunjiya3058822@gmail.com",
+      "phone": "5445456456",
+      "website": "https://www.npmjs.com/package//axios"
+    },
+    {
+      "id": 4,
+      "name": "patel",
+      "username": "dsd",
+      "email": "dsad",
+      "phone": "45",
+      "website": "https://www.npmjs.com/package//axios"
+    },
+    {
+      "id": 5,
+      "name": "dsad",
+      "username": "dsadsad",
+      "email": "sdasd",
+      "phone": "545646465456",
+      "website": "sdsadsdsadsd"
+    }
+  ]
+}
