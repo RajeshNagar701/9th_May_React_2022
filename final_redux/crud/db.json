@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "name": "Leanne Graham",
+      "name": "Leanne Graham n",
       "username": "Bret",
       "email": "Sincere@april.biz",
       "phone": "1-770-736-8031 x56442",
@@ -17,12 +17,12 @@
       "website": "https://www.npmjs.com/package//axios"
     },
     {
-      "id": 3,
-      "name": "vishv patel",
+      "name": "adoc",
       "username": "patel@gmail.com",
-      "email": "vishvunjiya3058822@gmail.com",
-      "phone": "5445456456",
-      "website": "https://www.npmjs.com/package//axios"
+      "email": "rajeshnagarn@gmail.com",
+      "phone": "523454",
+      "website": "https://www.npmjs.com/package//axios",
+      "id": "tMDfvUEfm"
     }
   ]
 }

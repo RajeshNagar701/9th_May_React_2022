@@ -35,7 +35,6 @@ function submithandel(e){
     dispatch(addUser(formvalue))
     navigate('/');
    }
-    
 }
   return (
       <div className="container mt-3">
@@ -69,6 +68,7 @@ function submithandel(e){
               </div>
               <button type="submit" onClick={submithandel} className="btn btn-primary">Submit</button>
           </form>
+		  
       </div>
 
   )

@@ -1,10 +1,10 @@
 import * as types from './actionType'
 
 const initialState={
-    usersarr:[],
+    users:[],
     user:{},
-    loading:true
-}
+    loading:true,
+};
 
 const userReducers=(state=initialState,action)=>{
 
@@ -12,31 +12,29 @@ const userReducers=(state=initialState,action)=>{
         case types.GET_USER:
             return{
                 ...state,
-                usersarr:action.payload,
+                users: action.payload,
                 loading:false
-            };
-        
-		
-        case types.DELETE_USER:
-            return{
-                ...state,
-                loading:false
-            };
-        
+            }
+       
+
+    	case types.DELETE_USER:
         case types.ADD_USER:
+        case types.UPDATE_USER:
+            
             return{
                 ...state,
-                loading:false
-            };   
-
-
-		 case types.EDIT_USER:
-            return{
-                ...state,
-                usersarr:action.payload,
-                loading:false
-            };
+                loading:false,
+            }    
 			
+			
+			
+			
+        case types.GET_SINGLE_USER:
+            return{
+                ...state,
+                user:action.payload,
+                loading:false,
+            }    
         default:
             return state;
     }

@@ -31,7 +31,7 @@ export const deleteUser=(id)=>{
     return function(dispatch){
         axios.delete(`http://localhost:3000/users/${id}`)
         .then((resp)=>{
-            dispatch(destroy());
+            dispatch(destroy(id));
             dispatch(getUser());
         })
         .catch(error=>console.log(error))
@@ -49,12 +49,23 @@ export const addUser=(data)=>{
 
 
 
-export const edituser=(id)=>{
+export const edit=(data)=>{
     return{
-        type:'EDIT_USER',
-        payload:id
+		type:types.EDIT_USER,
+        payload:data
     }
 }
+
+export const editUser=(id)=>{
+    return function(dispatch){
+        axios.get(`http://localhost:3000/users/${id}`)
+        .then((resp)=>{
+            dispatch(edit(resp.data));
+        })
+        .catch(error=>console.log(error))
+    }
+}
+
 
 export const updateuser=(data)=>{
     return{
